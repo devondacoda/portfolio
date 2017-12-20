@@ -2,6 +2,7 @@
   animation-name: spin;
   animation: spin 4s infinite linear;
   animation-play-state:paused;
+  will-change: transform;
 }
 
 .nav-style-block:hover {
