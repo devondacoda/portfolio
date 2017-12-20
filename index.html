@@ -1,13 +1,15 @@
 <html>
   <head>
     <title> Devon's Portfolio </title>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
-<!--    <script src="jquery-3.2.1.min.js"></script>-->
+    <link href="./css/baseline.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/animation.css" rel="stylesheet">
   </head>
   <body>
     <header class="navbar">
+      <div class="nav-style-block"></div>
       <h1 class="navbar-name">Devon JohnBaptiste</h1>
       <div class="navbar-contacts">
         <a class="socials" href="https://www.linkedin.com/in/djbap/">linkedIn</a>
@@ -26,7 +28,7 @@
     </div>
 
     <div id="skills" class="section"> 
-      <p>( check the ones you need )</p>
+      <p>( check the skills you need )</p>
       <div class="section-content">
         <div class="technologies">
           <h1>Technologies</h1>
@@ -41,7 +43,7 @@
             </div>
             <div>
               <input type="checkbox" value="PostgresQL" name="postgresql">
-              <label for="postgresql">PostgresQL</label>
+              <label for="postgresql">PostgreSQL</label>
             </div>
             <div>
               <input type="checkbox" value="Sequlize" name="sequelize">
@@ -112,5 +114,9 @@
         </div>
       </div>
     </div>
+
+    <footer hidden><a class="to-top" href="#">Back to the top?</a></footer>
+
+    <script src="./app.js"></script>
   </body>
 </html>

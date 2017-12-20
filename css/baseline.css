@@ -1,0 +1,25 @@
+body, html {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+p {
+  margin: 0;
+  padding: 12px;
+}
+footer {
+  position: fixed;
+  top: 90%;
+  right: 5%;
+}

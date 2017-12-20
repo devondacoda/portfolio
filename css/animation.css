@@ -1,0 +1,18 @@
+.nav-style-block {
+  animation-name: spin;
+  animation: spin 4s infinite linear;
+  animation-play-state:paused;
+}
+
+.nav-style-block:hover {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(50deg); }
+  70% { transform: rotate(10deg); }
+  75% { transform: rotate(280deg); }
+  80% { transform: rotate(20deg); }
+  100% { transform: rotate(360deg); }
+}
