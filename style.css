@@ -1,0 +1,106 @@
+body, html {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.navbar-name {
+  font-size: 2em;
+}
+
+.socials {
+  border: 1px solid steelblue;
+  border-radius: 4em;
+  margin: 0.2em;
+  padding: 0.4em;
+  transition: 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+.socials:hover {
+  background-color: rgba(77, 207, 207, .8);
+  color: white;
+}
+
+.hero {
+  display: flex;
+  height: 50vh;
+}
+.hero > * {
+  height: 100%;
+  color: white;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.image {
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+.hero-skills { background-image: url('img/good-at-bg.jpeg'); }
+.hero-projects { background-image: url('img/worked-on-bg.jpeg'); }
+
+.section { height: 100vh; }
+.section-content { padding-top: 10vh; }
+.section-content > h1 { color: red; }
+
+.checkboxes {
+  width: 53vw;
+  margin-left: auto;
+  text-align: left;
+}
+
+.fullstack-projects {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  grid-template-rows: repeat(3, 30vw);
+}
+
+.sousais { background-image: url('img/sousais-bg.jpg'); }
+.foreign-key { background-image: url('img/foreign-key-bg.png'); }
+.genie-bottle { background-image: url('img/genie-bottle-bg.png'); }
+
+@media (max-width: 650px) {
+  body { display: flex; flex-direction: column; }
+  .navbar { width: 100%; }
+  .navbar-name, h1 { font-size: 1.8em; }
+  .hero { flex-direction: column; }
+  .hero > * { width: 100%; }
+  .checkboxes { width: 60vw; }
+}
+
+/* Landscape mode, and (orientation:...) wasnt working */
+@media (max-height: 412px) and (min-width: 650px) {
+  h1 { font-size: 1.3em; }
+  .section-content { display: flex; }
+  .section-content > * { width: 33%; }
+  .checkboxes { width: 60%; }
+}
+
+/* Nexus 5 - keyboard open */
+@media (max-height: 412px) and (max-width: 412px), (max-height: 700px) {
+  .section { height: 45em; }
+}
+
