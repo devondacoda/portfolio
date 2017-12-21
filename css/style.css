@@ -4,8 +4,6 @@
   justify-content: center;
   align-items: center;
   height: 50vh;
-  /* background: rgb(147,151,152); */
-  /* color: rgba(147,151,152, 0.8); */
   color: white;
 }
 
@@ -26,6 +24,7 @@
   height: 18em;
   width: 17em;
   background: rgb(58,215,249);
+  transition: 0.3s ease-in-out;
 }
 
 .navbar-contacts { z-index: 1; }
@@ -50,6 +49,7 @@
 }
 
 .hero > * {
+  z-index: 1;
   height: 100%;
   color: white;
   text-shadow:
@@ -129,4 +129,20 @@
   }
 }
 
-/*  TODO - set mobile styling for nexus landscape, keyboard open */
+@media (max-height: 700px) {
+  .nav-style-block {
+    height: 12em;
+    width: 16em;
+  }
+}
+
+@media (max-height: 400px) {
+  .nav-style-block {
+    height: 80vh;
+    width: 100%;
+  }
+}
+
+@media (max-height: 282px) {
+  .navbar { flex-flow: row; }
+}

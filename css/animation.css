@@ -13,7 +13,15 @@
   0% { transform: rotate(0deg); }
   15% { transform: rotate(50deg); }
   70% { transform: rotate(10deg); }
-  75% { transform: rotate(280deg); }
-  80% { transform: rotate(20deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media (max-height: 400px) {
+  .nav-style-block:hover {
+    animation-play-state: paused;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
 }
