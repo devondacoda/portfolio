@@ -111,7 +111,6 @@
 /* Landscape mode, and (orientation:...) wasnt working */
 @media (max-height: 420px) and (min-width: 650px) {
   h1 { font-size: 1.3em; }
-  /* .section-content { display: flex; } */
   .section-content > * { width: 33%; margin: auto }
   .checkboxes { width: 60%; }
   .nav-style-block {
@@ -140,9 +139,15 @@
   .nav-style-block {
     height: 80vh;
     width: 100%;
+    border-radius: 0;
   }
 }
 
-@media (max-height: 282px) {
+@media (max-height: 284px) {
   .navbar { flex-flow: row; }
+}
+
+@media (max-height: 284px) and (max-width: 535px) {
+  .navbar { font-size: 0.6em; }
+  .section { height: 35em; }
 }
