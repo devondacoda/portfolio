@@ -57,7 +57,6 @@
   display: flex;
 }
 
-
 .image {
   background-color: grey;
   background-repeat: no-repeat;
@@ -96,6 +95,8 @@
 .foreign-key { background-image: url('../img/foreign-key-bg.png'); }
 .genie-bottle { background-image: url('../img/genie-bottle-bg.png'); }
 
+
+/* media queries */
 @media (max-width: 650px) {
   .navbar { width: 100%; }
   .navbar-name, h1 { font-size: 1.8em; }
@@ -106,8 +107,16 @@
     top: 0;
     left: 0;
     border-radius: 0;
-    height: 50vh;
-    width: 3em;
+    height: 100vh;
+    width: 0px;
+  }
+  .fullstack-projects {
+    margin-left: 6vw;
+    margin-right: 6vw;
+    width: 88vw;
+    height: 20vh;
+    grid-gap: 2px;
+    grid-template-rows: repeat(3, 40vw);
   }
 }
 
@@ -115,6 +124,7 @@
 @media (max-height: 420px) and (min-width: 650px) {
   h1 { font-size: 1.3em; }
   .section-content > * { width: 33%; margin: auto }
+  .fullstack-projects { width: 70%; }
   .checkboxes { width: 60%; }
   .nav-style-block {
     height: 11em;
@@ -124,18 +134,7 @@
 
 /* Nexus 5 - keyboard open */
 @media (max-height: 412px) and (max-width: 412px), (max-height: 700px) {
-  .section { height: 45em; }
-  .nav-style-block {
-    height: 9em;
-    width: 16em;
-  }
-}
-
-@media (max-height: 700px) {
-  .nav-style-block {
-    height: 12em;
-    width: 16em;
-  }
+  .section { height: 37em; }
 }
 
 @media (max-height: 400px) {
@@ -152,5 +151,4 @@
 
 @media (max-height: 284px) and (max-width: 535px) {
   .navbar { font-size: 0.6em; }
-  .section { height: 35em; }
 }
