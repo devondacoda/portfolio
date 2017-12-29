@@ -57,12 +57,18 @@
   display: flex;
 }
 
+
 .image {
   background-color: grey;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center
+  background-position: center;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+  border: 2px solid black;
 }
+.image:hover { opacity: 1; }
+.borderless { border: 0 }
 
 .hero-skills { background-image: url('../img/good-at-bg.jpeg'); }
 .hero-projects { background-image: url('../img/worked-on-bg.jpeg'); }
@@ -97,8 +103,11 @@
   .hero > * { width: 100%; }
   .checkboxes { width: 60vw; }
   .nav-style-block {
-    height: 14em;
-    width: 15em;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    height: 50vh;
+    width: 3em;
   }
 }
 
