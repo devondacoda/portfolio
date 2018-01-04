@@ -6,8 +6,11 @@
     <link href="./css/baseline.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/animation.css" rel="stylesheet">
+    <link href="./css/modal.css" rel="stylesheet">
   </head>
+
   <body>
+
     <header class="navbar">
       <div class="nav-style-block"></div>
       <h1 class="navbar-name">Devon JohnBaptiste</h1>
@@ -102,21 +105,34 @@
       <div class="section-content">
         <h1>Projects</h1>
         <div class="fullstack-projects">
-          <a class="sousais image" href="https://sousais.herokuapp.com/">
+          <div class="sousais image open-modal"></div>
+          <!-- href="https://sousais.herokuapp.com/"> -->
   <!--          SousAIs-->
-          </a>
-          <a class="foreign-key image" href="https://foreign-key.herokuapp.com/">
+          <!-- </a> -->
+          <div class="foreign-key image open-modal"></div>
+          <!-- href="https://foreign-key.herokuapp.com/"> -->
   <!--          Foreign Key-->
-          </a>
-          <a class="genie-bottle image" href="https://genie-in-a-bottle.herokuapp.com/">
+          <!-- </a> -->
+          <div class="genie-bottle image open-modal"></div>
+          <!-- href="https://genie-in-a-bottle.herokuapp.com/"> -->
   <!--          Genie in a Bottle-->
-          </a>
+          <!-- </a> -->
         </div>
       </div>
     </div>
 
-    <footer hidden><a class="to-top" href="#">Back to the top?</a></footer>
+    <!-- Project Modal -->
+    <div id="modal" class="modal" hidden>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="project-description"></p>
+        
+        <a class="project-link" href="#">Live Demo</a>
+      </div>
+    </div>
 
+    <footer hidden><a class="to-top" href="#">Back to the top?</a></footer>
     <script src="./app.js"></script>
   </body>
 </html>
