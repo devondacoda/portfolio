@@ -72,8 +72,8 @@
 .hero-skills { background-image: url('../img/good-at-bg.jpeg'); }
 .hero-projects { background-image: url('../img/worked-on-bg.jpeg'); }
 
-.section { height: 100vh; }
-.section-content { height: 100%; padding-top: 10vh; padding-bottom: 30em; }
+.section { height: 100vh; margin-top: 10vh; margin-bottom: 15vh;}
+.section-content { height: 100%; }
 .section-content > h1 { color: red; }
 
 .checkboxes {
@@ -85,10 +85,12 @@
 .fullstack-projects {
   width: 70%;
   margin: auto;
+  padding-bottom: 3em;
   display: grid;
   grid-gap: 3em;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-template-rows: repeat(4, 30vw);
+  grid-auto-rows: minmax(30vw, 1fr);
+  /* grid-template-rows: repeat(4, 30vw); */
 }
 
 .sousais { background-image: url('../img/sousais-bg.jpg'); }
@@ -115,9 +117,8 @@
     margin-left: 6vw;
     margin-right: 6vw;
     width: 88vw;
-    height: 20vh;
-    grid-gap: 2px;
-    grid-template-rows: repeat(4, 40vw);
+    grid-gap: 2em;
+    grid-auto-rows: minmax(40vw, 1fr);
   }
 }
 
@@ -135,7 +136,7 @@
 
 /* Nexus 5 - keyboard open */
 @media (max-height: 412px) and (max-width: 412px), (max-height: 700px) {
-  .section { height: 37em; }
+  .section { height: 50em; }
 }
 
 @media (max-height: 400px) {

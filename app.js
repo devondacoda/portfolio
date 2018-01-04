@@ -1,7 +1,7 @@
 const footer = document.getElementsByTagName('footer')[0];
 
 // Back to top modifiers
-document.addEventListener('mousewheel', () => {
+window.addEventListener('scroll', () => {
   if (this.scrollY <= 400) footer.setAttribute('hidden', true);
   else footer.removeAttribute('hidden');
 });
