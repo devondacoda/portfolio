@@ -14,7 +14,12 @@ const projectInfo = {
   sousais: 'An Amazon Alexa skill that acts as your personal Sous Chef in the kitchen! <br /><br /> Accompanied by an integrated Web Application via: https://sousais.herokuapp.com/. <br /><br /> You pack your "fridge" by telling Sous what ingredients you have. At anytime, you can then ask Sous "what recipes can I make" and she will give you back recipes that include the ingredients you have in your fridge. <br /><br /> Built with: JavaScript, CSS, Node, Express, React, React-Redux, PostgreSQL, Sequelize, AWS Lambda, Heroku, Socket.io',
   foreignKey: 'A light weight web app to practice Spanish (more languages to come). Foreign Key throws a new Spanish word at you, along with the pronunciation of both the Spanish and English translation. Pronounce the word correctly to score points. Additionally, press \'Enter\' to open a search box and type in any recognizable English word/phrase to get an immediate translation rendered on your screen and added to your local dictionary, to be able to practice it any time in the future as well. Soon to be a Chrome Extension that operates the same as the demo on each New Tab opened. <br /><br /> To use, click on the speaker for pronunciation. Click anywhere else on screen to reveal the English translation. Click the mic to speak. <br /><br /> Built using HTML, CSS, Bootstrap, jQuery, JavaScript, Express, Annyang, and Web Speech API.',
   genieInBottle: 'A mock e-commerce site selling various bottled goods, where users can sign up, browse or search the inventory, add to cart, purchase orders, and keep track of past orders. <br /><br /> Built with JavaScript, Express, Sequelize, Postgres, Node, React, and Redux on an agile team.',
+  portfolio: 'Soo meta! <br /><br /> A site to showcase my skills to convince you to <a href="https://www.linkedin.com/in/djbap/">hire me</a>. <br /><br /> Built from scratch with VanillaJS, plain CSS, and good ol\' HTML. <br /><br /> Click on the link below for a recursive joke.',
 };
+
+const {
+  sousais, foreignKey, genieInBottle, portfolio,
+} = projectInfo;
 
 // Projects' modal modifiers
 const modal = document.querySelector('#modal');
@@ -24,24 +29,27 @@ const modalTitle = document.querySelector('#modal-title');
 const projectDescription = document.querySelector('#project-description');
 const projectLink = document.querySelector('.project-link');
 
+const setModalContents = (title, content, link) => {
+  modalTitle.innerHTML = title;
+  projectDescription.innerHTML = content;
+  projectLink.setAttribute('href', link);
+};
+
 // Open modal when a project div is clicked on
 modalToggler.forEach((div) => {
   div.onclick = () => {
     switch (div.classList[0]) {
       case 'genie-bottle':
-        modalTitle.innerHTML = 'GENIE IN A BOTTLE';
-        projectDescription.innerHTML = projectInfo.genieInBottle;
-        projectLink.setAttribute('href', 'https://genie-in-a-bottle.herokuapp.com/');
+        setModalContents('GENIE IN A BOTTLE', genieInBottle, 'https://genie-in-a-bottle.herokuapp.com/');
         break;
       case 'foreign-key':
-        modalTitle.innerHTML = 'FOREIGN KEY';
-        projectDescription.innerHTML = projectInfo.foreignKey;
-        projectLink.setAttribute('href', 'https://foreign-key.herokuapp.com/');
+        setModalContents('FOREIGN KEY', foreignKey, 'https://foreign-key.herokuapp.com/');
         break;
       case 'sousais':
-        modalTitle.innerHTML = 'SOUSAIS';
-        projectDescription.innerHTML = projectInfo.sousais;
-        projectLink.setAttribute('href', 'https://sousais.herokuapp.com/');
+        setModalContents('SOUSAIS', sousais, 'https://sousais.herokuapp.com/');
+        break;
+      case 'portfolio':
+        setModalContents('PORTFOLIO SITE', portfolio, 'https://devondacoda.github.io/portfolio/');
         break;
       default:
         projectDescription.innerHTML = 'Select a project for more info';
