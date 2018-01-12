@@ -25,7 +25,8 @@
 
 .socials {
   border: 1px solid steelblue;
-  border-radius: 4em;
+  height: 1.5em;
+  border-radius: 5px;
   margin: 0.2em;
   padding: 0.4em;
   transition: 0.3s ease-in-out;
@@ -64,7 +65,7 @@
   background-position: center;
   opacity: 0.8;
   transition: 0.2s ease-in-out;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .image:hover { opacity: 1; }
 .borderless { border: 0 }
@@ -72,8 +73,10 @@
 .hero-skills { background-image: url('../img/good-at-bg.jpeg'); }
 .hero-projects { background-image: url('../img/worked-on-bg.jpeg'); }
 
-.section { height: 100vh; margin-top: 10vh; margin-bottom: 15vh;}
-.section-content { height: 100%; }
+.section {
+  min-height: 100vh;
+  margin-bottom: 12vh;
+}
 .section-content > h1 { color: red; }
 
 .checkboxes {
@@ -82,15 +85,20 @@
   text-align: left;
 }
 
-.fullstack-projects {
-  width: 70%;
+.fullstack-projects, .courses {
+  width: 72%;
   margin: auto;
-  padding-bottom: 3em;
+  padding: 0;
+  font-size: 0.7em;
   display: grid;
   grid-gap: 3em;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-auto-rows: minmax(30vw, 1fr);
-  /* grid-template-rows: repeat(4, 30vw); */
+}
+
+.courses li img, .fullstack-projects img { width: 100%; }
+.training {
+  margin-bottom: 2em;
 }
 
 .sousais { background-image: url('../img/sousais-bg.jpg'); }
@@ -113,7 +121,7 @@
     height: 100vh;
     width: 0px;
   }
-  .fullstack-projects {
+  .fullstack-projects, .courses {
     margin-left: 6vw;
     margin-right: 6vw;
     width: 88vw;
@@ -124,19 +132,11 @@
 
 /* Landscape mode, and (orientation:...) wasnt working */
 @media (max-height: 420px) and (min-width: 650px) {
-  h1 { font-size: 1.3em; }
-  .section-content > * { width: 33%; margin: auto }
-  .fullstack-projects { width: 70%; }
   .checkboxes { width: 60%; }
   .nav-style-block {
     height: 11em;
     width: 15em;
   }
-}
-
-/* Nexus 5 - keyboard open */
-@media (max-height: 412px) and (max-width: 412px), (max-height: 700px) {
-  .section { height: 50em; }
 }
 
 @media (max-height: 400px) {
@@ -149,8 +149,33 @@
 
 @media (max-height: 284px) {
   .navbar { flex-flow: row; }
+  .navbar-contacts {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (max-height: 284px) and (max-width: 535px) {
   .navbar { font-size: 0.6em; }
+  .navbar-name { font-size: 3em; width: 40% }
+  .navbar-contacts { display: block; }
+  .skype { height: 5px; }
+}
+
+@media (max-height: 200px) and (max-width: 732px) { /* nexus 5 landscape keyboard open */
+  .navbar-name { font-size: 1.5em; width: 50% }
+  .skype { 
+    position: absolute;
+    top: -6px;
+    left: calc(50% - 41px);
+  }
+}
+
+@media (max-height: 200px) and (max-width: 680px) {
+  .navbar-name { font-size: 1.5em; width: 50% }
+  .skype { 
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 41px);
+  }
 }

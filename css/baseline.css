@@ -18,8 +18,21 @@ p {
   margin: 0;
   padding: 12px;
 }
-footer {
+
+.to-top {
   position: fixed;
-  top: 95%;
-  right: 3%;
+  top: 85%;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  height: 5em;
+  width: 5em;
+  background-image: url('../img/up-arrow.png');
+}
+
+@media (max-height: 420px) {
+  .to-top {
+    top: 65%;
+  }
 }
