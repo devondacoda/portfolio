@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background: rgb(58,215,249);
+  background: linear-gradient(to right, rgba(77,54,255,1) 0%,rgba(77,54,255,1) 20%,rgba(23,165,255,1) 93%); /*#17A5FF*/
 }
 
 .navbar-name {
@@ -13,17 +13,17 @@
 }
 
 .nav-style-block {
-  border-radius: 2em;
   position: absolute;
-  z-index: 0;
-  height: 18em;
-  width: 17em;
-  background: white;
+  padding: 0.7em;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0.8em 0.4em 2em 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 45%;
+  width: 70%;
 }
-
 .navbar-contacts { z-index: 1; }
 
-.socials {
+.socials, .project-link {
   border: 1px solid steelblue;
   height: 1.5em;
   border-radius: 5px;
@@ -33,7 +33,7 @@
   text-transform: capitalize;
 }
 
-.socials:hover {
+.socials:hover, .project-link:hover {
   background-color: rgba(77, 207, 207, .8);
   color: white;
 }
@@ -41,6 +41,7 @@
 .hero {
   display: flex;
   height: 50vh;
+  background: rgb(218, 235, 225);
 }
 
 .hero > * {
@@ -65,7 +66,7 @@
   background-position: center;
   opacity: 0.8;
   transition: 0.2s ease-in-out;
-  border: 1px solid black;
+  border-top: 0.3em solid rgb(128, 8, 8);
 }
 .image:hover { opacity: 1; }
 .borderless { border: 0 }
@@ -101,10 +102,11 @@
   margin-bottom: 2em;
 }
 
+.financial-foundations { background-image: url('../img/financial-foundations-bg.png'); }
+.portfolio { background-image: url('../img/portfolio-bg.png'); }
 .sousais { background-image: url('../img/sousais-bg.jpg'); }
 .foreign-key { background-image: url('../img/foreign-key-bg.png'); }
 .genie-bottle { background-image: url('../img/genie-bottle-bg.png'); }
-.portfolio { background-image: url('../img/portfolio-bg.png'); }
 
 
 /* media queries */
@@ -114,13 +116,6 @@
   .hero { flex-direction: column; }
   .hero > * { width: 100%; }
   .checkboxes { width: 60vw; }
-  .nav-style-block {
-    top: 0;
-    left: 0;
-    border-radius: 0;
-    height: 100vh;
-    width: 0px;
-  }
   .fullstack-projects, .courses {
     margin-left: 6vw;
     margin-right: 6vw;
@@ -133,18 +128,6 @@
 /* Landscape mode, and (orientation:...) wasnt working */
 @media (max-height: 420px) and (min-width: 650px) {
   .checkboxes { width: 60%; }
-  .nav-style-block {
-    height: 11em;
-    width: 15em;
-  }
-}
-
-@media (max-height: 400px) {
-  .nav-style-block {
-    height: 80vh;
-    width: 100%;
-    border-radius: 0;
-  }
 }
 
 @media (max-height: 284px) {
@@ -157,7 +140,7 @@
 
 @media (max-height: 284px) and (max-width: 535px) {
   .navbar { font-size: 0.6em; }
-  .navbar-name { font-size: 3em; width: 40% }
+  .navbar-name { width: 40% }
   .navbar-contacts { display: block; }
   .skype { height: 5px; }
 }

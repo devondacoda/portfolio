@@ -15,10 +15,11 @@ const projectInfo = {
   foreignKey: 'A light weight web app to practice Spanish (more languages to come). Foreign Key throws a new Spanish word at you, along with the pronunciation of both the Spanish and English translation. Pronounce the word correctly to score points. Additionally, press \'Enter\' to open a search box and type in any recognizable English word/phrase to get an immediate translation rendered on your screen and added to your local dictionary, to be able to practice it any time in the future as well. Soon to be a Chrome Extension that operates the same as the demo on each New Tab opened. <br /><br /> To use, click on the speaker for pronunciation. Click anywhere else on screen to reveal the English translation. Click the mic to speak. <br /><br /> Built using HTML, CSS, Bootstrap, jQuery, JavaScript, Express, Annyang, and Web Speech API.',
   genieInBottle: 'A mock e-commerce site selling various bottled goods, where users can sign up, browse or search the inventory, add to cart, purchase orders, and keep track of past orders. <br /><br /> Built with JavaScript, Express, Sequelize, Postgres, Node, React, and Redux on an agile team.',
   portfolio: 'Soo meta! <br /><br /> A site to showcase my skills to convince you to <a href="https://www.linkedin.com/in/djbap/">hire me</a>. <br /><br /> Built from scratch with VanillaJS, plain CSS, and good ol\' HTML. <br /><br /> Click on the link below for a recursive joke.',
+  financialFoundations: 'A React single page app to contain my notes from a Lynda course, Finance Foundations'
 };
 
 const {
-  sousais, foreignKey, genieInBottle, portfolio,
+  sousais, foreignKey, genieInBottle, portfolio, financialFoundations
 } = projectInfo;
 
 // Projects' modal modifiers
@@ -50,6 +51,9 @@ modalToggler.forEach((div) => {
         break;
       case 'portfolio':
         setModalContents('PORTFOLIO SITE', portfolio, 'https://devondacoda.github.io/portfolio/');
+        break;
+      case 'financial-foundations':
+        setModalContents('FINANCIAL FOUNDATIONS', financialFoundations, 'https://financialfoundations.herokuapp.com/');
         break;
       default:
         projectDescription.innerHTML = 'Select a project for more info';
